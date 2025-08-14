@@ -1,59 +1,65 @@
 # Claude Code Agents
 
-Uma coleção de agentes personalizados para Claude Code, projetados para aprimorar fluxos de trabalho de desenvolvimento e automatizar tarefas comuns.
+A collection of custom agents for Claude Code, designed to enhance development workflows and automate common tasks.
 
-## Autor
+## Author
 
-**Samuel Rizzo**  
+**rizzo**  
 GitHub: [@samuelrizzo](https://github.com/samuelrizzo)
 
-## Repositório
+## Repository
 
 [https://github.com/samuelrizzo/cc-agents](https://github.com/samuelrizzo/cc-agents)
 
-## Agentes Disponíveis
+## Available Agents
 
 ### 🔍 CodeRabbit Review Handler
-**Arquivo**: `.claude/agents/coderabbit-review-handler.md`  
-**Modelo**: Sonnet
 
-Analisa reviews de pull requests do CodeRabbit e implementa correções ou fornece justificativas técnicas.
+**File**: `.claude/agents/coderabbit-review-handler.md`  
+**Model**: Sonnet
 
-**Características:**
-- Avalia a validade do feedback de revisão de código gerado por IA
-- Cria planos de implementação para feedback válido
-- Fornece justificativas técnicas para feedback inválido
-- Segue um framework de decisão estruturado
-- Referencia documentação do projeto (CLAUDE.md) para contexto
+Analyzes CodeRabbit pull request reviews and implements fixes or provides technical justifications.
+
+**Features:**
+
+- Evaluates validity of AI-generated code review feedback
+- Creates implementation plans for valid feedback
+- Provides technical justifications for invalid feedback
+- Follows a structured decision framework
+- References project documentation (CLAUDE.md) for context
 
 ### 🔧 Lint Fixer
-**Arquivo**: `.claude/agents/lint-fixer.md`  
-**Modelo**: Sonnet  
-**Cor**: Azul
 
-Identifica e corrige automaticamente erros de linting em bases de código.
+**File**: `.claude/agents/lint-fixer.md`  
+**Model**: Sonnet  
+**Color**: Blue
 
-**Características:**
-- Escaneia e categoriza violações de linting
-- Cria planos de correção KISS (Keep It Simple, Stupid)
-- Executa correções sistemáticas (auto-corrigíveis primeiro)
-- Valida que as mudanças não quebram funcionalidades
-- Suporta ESLint, Prettier, TypeScript, React/Next.js
+Automatically identifies and fixes linting errors in codebases.
+
+**Features:**
+
+- Scans and categorizes linting violations
+- Creates KISS (Keep It Simple, Stupid) fix plans
+- Executes systematic fixes (auto-fixable first)
+- Validates changes don't break functionality
+- Supports ESLint, Prettier, TypeScript, React/Next.js standards
 
 ### ✅ Pre-Commit Reviewer
-**Arquivo**: `.claude/agents/pre-commit-reviewer.md`  
-**Modelo**: Sonnet
 
-Revisa mudanças de código antes do commit para garantir conformidade com diretrizes do projeto.
+**File**: `.claude/agents/pre-commit-reviewer.md`  
+**Model**: Sonnet
 
-**Características:**
-- Lê diretrizes do projeto de `/.cursor/rules` e `/CLAUDE.md`
-- Corrige automaticamente problemas de linting antes da revisão manual
-- Analisa conformidade com TypeScript, React/Next.js, Tailwind CSS
-- Verifica padrões de arquitetura, acessibilidade, práticas de segurança
-- Cria planos de correção quando problemas são encontrados
+Reviews code changes before committing to ensure project guideline compliance.
 
-## Estrutura do Repositório
+**Features:**
+
+- Reads project guidelines from `/.cursor/rules` and `/CLAUDE.md`
+- Auto-fixes linting issues before manual review
+- Analyzes TypeScript, React/Next.js, Tailwind CSS compliance
+- Checks architecture patterns, accessibility, security practices
+- Creates correction plans when issues are found
+
+## Repository Structure
 
 ```
 cc-agents/
@@ -65,15 +71,15 @@ cc-agents/
 └── README.md
 ```
 
-## Como Usar
+## Usage
 
-1. Clone este repositório em seu ambiente de desenvolvimento
-2. Os agentes serão automaticamente disponibilizados no Claude Code
-3. Use os agentes conforme necessário em seu fluxo de trabalho:
-   - **CodeRabbit Review Handler**: Após receber reviews do CodeRabbit
-   - **Lint Fixer**: Quando encontrar erros de linting
-   - **Pre-Commit Reviewer**: Antes de fazer commits importantes
+1. Clone this repository to your development environment
+2. Agents will be automatically available in Claude Code
+3. Use agents as needed in your workflow:
+   - **CodeRabbit Review Handler**: After receiving CodeRabbit reviews
+   - **Lint Fixer**: When encountering linting errors
+   - **Pre-Commit Reviewer**: Before making important commits
 
-## Contribuições
+## Contributing
 
-Sinta-se à vontade para enviar issues e solicitações de melhorias!
+Feel free to submit issues and enhancement requests!
